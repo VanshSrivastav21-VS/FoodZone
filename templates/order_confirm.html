@@ -1,0 +1,27 @@
+{% extends "layout/base.html" %}
+{% load static %}
+
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+    <!-- Add any CSS styling or links to external stylesheets here -->
+</head>
+<body style="background-color: bisque;">
+    <h1>Your order is successfull.</h1>
+    <p>Thank you for your order, {{ order.customer_name }}!</p>
+    <p>Your order details:</p>
+    <ul>
+        <li>Menu Item: {{ order.menu_item.name }}</li>
+        <li>Quantity: {{ order.quantity }}</li>
+        <li>Total Price: {{ order.total_price }}</li>
+        <!-- Add any additional order details here -->
+    </ul>
+    <!-- Add any additional content or messages here -->
+</body>
+</html>
+{% endblock body %}
+    
